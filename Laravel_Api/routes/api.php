@@ -22,3 +22,6 @@ Route::get('/users/{id?}', [UserApiController::class, 'ShowUser']);
 Route::post('/add-users', [UserApiController::class, 'AddUser']);
 Route::post('/add-multiple-users', [UserApiController::class, 'AddMultipleUser']);
 Route::put('/update-user-details/{id}', [UserApiController::class, 'UpdateUserDetails']);
+Route::patch('/update-single-record/{id}', [UserApiController::class, 'UpdateSingleRecord']);
+Route::delete('/delete-single-user/{id}', [UserApiController::class, 'deleteUser']);
+Route::delete('/delete-single-user-with-json', [UserApiController::class, 'deleteUserJson']);
